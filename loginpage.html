@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function check(){
+
+    var uid=document.getElementById("userid").value;
+    var pwd= document.getElementById("passwd").value;
+    var msg ="";
+    if(uid.length<=0)
+    {
+        msg + "username can not be empty";
+    }
+    if(pwd.length<=0)
+    {
+        msg + "password can not be empty";
+    }
+    if(msg.length>0)
+    {
+        alert(msg);
+    }
+    if(pwd.length<8)
+    {
+        alert("password must be at least 8 charector");
+
+    }
+    if(username=="admin" && password== "admin123")
+    {
+        alert ("login successful");
+    }
+
+}
+
+</script>
+<body>
+    <form action="" method="post">
+        <label for="username">username</label>
+        <input type="text" id="userid" name="username"><br><br>
+        <label for="password">password</label>
+        <input type="password" id="passwd" name="password"><br><br>
+        <input type="submit" value="submit" onclick="click">
+    </form>
+    
+</body>
+</html>
