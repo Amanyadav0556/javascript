@@ -1,52 +1,57 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conform password</title>
+    <title>Confirm Password</title>
 </head>
 <body>
-     <form action="" method="post">
-        <label for="username">username</label>
-        <input type="text" id="userid" name="username      "><br><br>
-        <label for="password">password</label>
-        <input type="password" id="passwd" name="password     "><br><br>
-        <label for="conform password" >conform password</label>
-        <input type="conformpassword" id="cpwd" name="conform password"><br><br>
-        <input type="submit" value="submit" onclick="click"  style="background-color: rgb(227, 17, 17);">
+    <form action="" method="post" onsubmit="return check()">
+        <label for="userid">Username</label>
+        <input type="text" id="userid" name="username" placeholder="Enter the username"> <br><br>
+
+        <label for="passwd">Password</label>
+        <input type="password" id="passwd" name="password" placeholder="Enter the password"><br><br>
+
+        <label for="cpwd">Confirm Password</label>
+        <input type="password" id="cpwd" name="confirm_password" placeholder="Re-enter the password"><br><br>
+
+        <input type="submit" value="Submit" style="background-color: rgb(227, 17, 17);">
     </form>
+
     <script>
-        function check(){
+        function check() {
+            var uid = document.getElementById("userid").value;
+            var pwd = document.getElementById("passwd").value;
+            var cpwd = document.getElementById("cpwd").value;
+            var msg = "";
 
-    var uid=document.getElementById("userid").value;
-    var pwd= document.getElementById("passwd").value;
-    var msg ="";
-    if(uid.length<=0)
-    {
-        msg + "username can not be empty";
-    }
-    if(pwd.length<=0)
-    {
-        msg + "password can not be empty";
-    }
-    if(msg.length>0)
-    {
-        alert(msg);
-    }
-    if(pwd.length<8)
-    {
-        alert("password must be at least 8 charector");
+            if(uid.length <= 0) {
+                msg += "Username cannot be empty\n";
+            }
+            if(pwd.length <= 0) {
+                msg += "Password cannot be empty\n";
+            }
+            if(pwd.length < 8) {
+                msg += "Password must be at least 8 characters\n";
+            }
+            if(pwd !== cpwd) {
+                msg += "Passwords do not match\n";
+            }
 
-    }
-    if(username=="admin" && password== "admin123")
-    {
-        alert ("login successful");
-    }
+            if(msg.length > 0) {
+                alert(msg);
+                return false; 
+            }
 
-}
-
- 
-
+            if(uid === "admin" && pwd === "admin123") {
+                alert("Login successful");
+            }
+            return true;
+        }
     </script>
 </body>
 </html>
+
+ 
