@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+ import React, {useState} from "react";
 
 function App() {
   const [status, setStatus] = useState(0);
@@ -8,7 +8,7 @@ function App() {
 
       <h1>Multiple Conditional Rendering</h1>
 
-      <button onClick={() => setStatus(1)}>Show Student </button>
+      <button onClick={() => setStatus(1)}>Show Student</button>
       <button onClick={() => setStatus(2)}>Show Teacher</button>
       <button onClick={() => setStatus(3)}>Show Admin</button>
 

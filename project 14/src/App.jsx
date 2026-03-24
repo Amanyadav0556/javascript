@@ -60,4 +60,4 @@ function FormExample() {
   );
 }
 
-export default 
+export default FormExample;
