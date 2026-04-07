@@ -1,0 +1,132 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #1a1a1a;
+}
+
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  background: #0d1b2a;
+  color: #ffffff;
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  border: 1px solid #33415c;
+  background: transparent;
+  color: #ffffff;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+  background: #415a77;
+}
+
+.cart-pill {
+  background: #1b263b;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+}
+
+.main {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid #d8dee9;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.product-card h3 {
+  margin-top: 0;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.form {
+  max-width: 340px;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.form input,
+.form button,
+.product-meta button,
+.main button {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #c2c7d0;
+  border-radius: 8px;
+}
+
+.form button,
+.product-meta button,
+.main button {
+  background: #0d1b2a;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.cart-list {
+  padding-left: 1.2rem;
+}
+
+.total {
+  font-weight: 700;
+}
+
+.footer {
+  background: #0d1b2a;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.9rem;
+}
